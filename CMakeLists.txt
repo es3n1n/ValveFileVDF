@@ -6,7 +6,7 @@ add_library(ValveFileVDF::ValveFileVDF ALIAS ValveFileVDF)
 target_include_directories(ValveFileVDF INTERFACE "include")
 
 # Disable cxx17 deprecation warnings for the std::wstring_convert
-target_compile_definitions(ValveFileVDF INTERFACE "_LIBCPP_DISABLE_DEPRECATION_WARNINGS=")
+target_compile_definitions(ValveFileVDF INTERFACE "-D_LIBCPP_DISABLE_DEPRECATION_WARNINGS")
 
 include(CTest)
 add_subdirectory(./tests)
